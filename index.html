@@ -29,8 +29,10 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col-md-4 col-xl-2 mt-4 text-nowrap">
-                    <a href="#reserveForm" role="button" class="btn btn-info btn-lg" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234 </strong>">Reserve Campsite</a>
-                  
+                    <a href="#reserveForm" role="button" class="btn btn-info btn-lg" data-toggle="tooltip"
+                        data-placement="bottom" data-html="true"
+                        title="Or call us at <br /><strong>1-206-555-1234 </strong>">Reserve Campsite</a>
+
                 </div>
             </div>
         </div>
@@ -54,10 +56,55 @@
                     <li class="nav-item"> <a class="nav-link" href="contactus.html"> <i
                                 class="fa fa-address-card fa-lg"> </i> Contact </a></li>
                 </ul>
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"></i> Login
+                    </a>
+                </span>
             </div>
         </div>
 
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Login </h3>
+                    <button type="button" class="close" data-dismiss="modal"> &times; </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEMail"> Email Address </label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail"
+                                        placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword"> Password </label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword"
+                                        placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember Me </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">
+                                    Cancel </button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1"> Sign in </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="container">
@@ -90,15 +137,16 @@
             </div>
             <div class="col">
                 <div class="media">
-                   
+
                     <div class="media-body align-self-center">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the
-                    shores of the pristine
-                    React Lake is a favorite for fly fishers.</p>
-                    
-                </div>
-                <img class="d-flex img-thumbnail" src="images/img/react-lake-thumb.jpg" alt="React Lake Campground">  
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground
+                            on the
+                            shores of the pristine
+                            React Lake is a favorite for fly fishers.</p>
+
+                    </div>
+                    <img class="d-flex img-thumbnail" src="images/img/react-lake-thumb.jpg" alt="React Lake Campground">
                 </div>
             </div>
         </div>
@@ -123,44 +171,44 @@
 
             </div>
         </div>
-    <div class="row row-content">
-        <div class="col-sm-6 mx-auto">
-            <div class="card">
-                <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
-            
-            <div class="card-body">
-                <form id="reserveForm">
-                    <div class="form-group row">
-                        <label for="numofCampers" class="col-sm-6 col-form-label">Number of Campers</label>
-                    
-                   <div class="col">
-                    <select class="form-control" name="numofCampers" id="numofCampers">
-                        <option value="Select...">Select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                   </div>
+        <div class="row row-content">
+            <div class="col-sm-6 mx-auto">
+                <div class="card">
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <div class="form-group row">
+                                <label for="numofCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+
+                                <div class="col">
+                                    <select class="form-control" name="numofCampers" id="numofCampers">
+                                        <option value="Select...">Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="date" class="col-sm-6 col-form-label">Date</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" type="date" id="date" name="date" placeholder="date">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group row">
-                        <label for="date" class="col-sm-6 col-form-label">Date</label>
-                        <div class="col-sm-6">
-                        <input class="form-control" type="date" id="date" name="date" placeholder="date">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <button type="submit" class="btn btn-primary">Search</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
 
@@ -204,7 +252,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-        $(function(){
+        $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
